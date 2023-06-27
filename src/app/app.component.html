@@ -1,0 +1,15 @@
+<div *ngFor="let category of categories">
+	<div (click)="getProducts(category)" class="category-item">
+		{{ category.name }}
+	</div>
+</div>
+
+<div class="product-items">
+	<div *ngIf="products.length == 0">NO PRODUCT DATA</div>
+
+	<div *ngIf="products.length != 0">
+		<div *ngFor="let product of products">
+			<div>{{ product.name }}</div>
+		</div>
+	</div>
+</div>

@@ -2,7 +2,7 @@ import { Category } from "./category.model";
 
 export interface Product {
     id: string
-	productName : string
+	name : string
     description : string
 	price: number
 	isFeatures: boolean,
