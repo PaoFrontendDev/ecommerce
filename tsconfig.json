@@ -4,6 +4,9 @@
   "compilerOptions": {
     "typeRoots": ["node_modules/@types"],
     "baseUrl": "./",
+    "paths": {
+      "tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
