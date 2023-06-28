@@ -1,0 +1,40 @@
+<nav>
+    <ul>
+        <li *ngFor="let category of categories"
+        ><a (click)="goToProductList(category)">{{ category.name }}</a></li>
+        
+    </ul>
+</nav>
+<div class="row container">
+    <div class="col-2">
+        <h1 class="pb-4">Discover Exquisite <br> Fashion Trends!</h1>
+        <p class="pb-3">Uncover a World of Distinctive Style: Immerse yourself in the realm of exquisite
+            fashion trends at our clothing store</p>
+        <a class="btn">Explore Fashion Trends &#8594;</a>
+    </div>
+    <div class="col-2">
+        <img src="assets/images/model.jpg">
+    </div>
+</div>
+
+
+
+<div class="small-container">
+    <h2 class="title">Features Products</h2>
+    <div class="row">
+        <div class="col-4" *ngFor="let product of featuresProducts">
+            <img [src]="product.imageUrl">
+            <h4>{{product.name}}</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+            </div>
+            <p>$ {{product.price}}</p>
+            <div>{{product.description}}</div>
+        </div>
+
+    </div>
+</div>

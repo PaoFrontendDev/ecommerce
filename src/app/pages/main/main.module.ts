@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment';
+import { MainRoutingModule } from './main-routing.module';
+import { MainComponent } from './main.component';
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -21,21 +18,30 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MainComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    BrowserAnimationsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    CommonModule,
+    MainRoutingModule,
+    // MdbAccordionModule,
+    // MdbCarouselModule,
+    // MdbCheckboxModule,
+    // MdbCollapseModule,
+    // MdbDropdownModule,
+    // MdbFormsModule,
+    // MdbModalModule,
+    // MdbPopoverModule,
+    // MdbRadioModule,
+    // MdbRangeModule,
+    // MdbRippleModule,
+    // MdbScrollspyModule,
+    // MdbTabsModule,
+    // MdbTooltipModule,
+    // MdbValidationModule,
+  ]
 })
-export class AppModule { }
+export class MainModule { }
